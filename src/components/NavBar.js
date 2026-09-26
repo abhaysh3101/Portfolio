@@ -45,10 +45,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/abhaysharma31/" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
+                <a href="https://www.linkedin.com/in/abhaysh3101/" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
                 <a href="https://x.com/abhaysh3101" target="_blank" rel="noreferrer"><Twitter className="hii" style={{color: "#fff"}}/></a>
-                <a href="https://github.com/Abhay31" target="_blank" rel="noreferrer"><Github className="hii" style={{color: "#fff"}}/></a>
-                <a href="https://www.instagram.com/_abhay.1931/" target="_blank" rel="noreferrer"><img src={navIcon3} alt="" /></a>
+                <a href="https://github.com/abhaysh3101" target="_blank" rel="noreferrer"><Github className="hii" style={{color: "#fff"}}/></a>
+                <a href="https://www.instagram.com/abhay_31.01/" target="_blank" rel="noreferrer"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

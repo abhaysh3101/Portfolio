@@ -28,12 +28,27 @@ export const Projects = () => {
   const experiences = [
     {
       year: 'January 2025 - Present',
-      title: 'Software Engineer @Salgem Infoigy Tech Pvt Ltd',
+      title: 'Software Engineer @Genicminds Tech Pvt Ltd',
       description: (
-        <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
-          <li>Actively involved in the development of various software applications, including critical government solutions and innovative commercial projects, ensuring compliance with diverse requirements and standards.</li>
-          <li>Collaborated with stakeholders from various sectors, including government agencies and private organizations, to gather requirements, align project objectives, and deliver tailored software solutions that meet diverse user needs.</li>
-          <li>Applied industry best practices in software development, including agile methodologies and quality assurance processes, to enhance project efficiency and ensure high-quality deliverables across all projects.</li>
+        <ul style={{ listStyleType: "disc", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "8px" }}>
+          <li>
+            Delivered 5+ full-stack web applications, including 3 government portals (Ulhasnagar & Kulgaon Badlapur Municipal Corporations) serving 20,000+ monthly active users.
+          </li>
+          <li>
+            Architected an AI-powered CMS integrating OpenAI & Gemini APIs with RBAC across 4+ websites, cutting manual content authoring effort by 40%.
+          </li>
+          <li>
+            Engineered end-to-end core modules for the 360 Degree Animal Parenting System, covering procurement, beneficiary lifecycle, reporting, and livestock management.
+          </li>
+          <li>
+            Built the Smart Neckband (SNB) IoT tracking module for real-time livestock monitoring, integrating GPS, temperature, heart rate, and activity sensor streams.
+          </li>
+          <li>
+            Designed scalable REST APIs and optimized database queries to slash response times by up to 25%, securing portals with JWT, bcrypt, and dynamic CAPTCHA.
+          </li>
+          <li>
+            Built high-performance dashboards using React.js and Tailwind CSS while driving 15+ Agile sprint cycles, conducting code reviews, and resolving 15+ production issues.
+          </li>
         </ul>
       ),
       icon: <PersonWorkspace />,
