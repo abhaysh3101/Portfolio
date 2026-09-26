@@ -22,7 +22,7 @@ contactEmail.verify((error) => {
   else console.log("Email transporter is ready");
 });
 
-app.post("/contact", async (req, res) => {
+app.post("/api/contact", async (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
 
   if (!firstName || !lastName || !email || !phone || !message) {
@@ -94,3 +94,5 @@ app.post("/contact", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = app;
