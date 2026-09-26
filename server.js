@@ -4,7 +4,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = 5011;
+const PORT = process.env.PORT || 5011;
 
 app.use(cors());
 app.use(express.json());
@@ -17,10 +17,12 @@ const contactEmail = nodemailer.createTransport({
   },
 });
 
-contactEmail.verify((error) => {
-  if (error) console.error("Email transporter error:", error);
-  else console.log("Email transporter is ready");
-});
+if (process.env.NODE_ENV !== "production") {
+  contactEmail.verify((error) => {
+    if (error) console.error("Email transporter error:", error);
+    else console.log("Email transporter is ready");
+  });
+}
 
 app.post("/api/contact", async (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
@@ -93,6 +95,8 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
 
 module.exports = app;
