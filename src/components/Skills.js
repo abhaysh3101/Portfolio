@@ -1,313 +1,90 @@
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png";
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import ChangingProgressProvider from "./ChangingprogressProvider";
-import {
-  buildStyles
-} from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import React from 'react';
+import colorSharp from '../assets/img/color-sharp.png';
+
+const SKILL_CATEGORIES = [
+  {
+    title: 'Languages',
+    skills: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'C++', 'C', 'HTML5', 'CSS3']
+  },
+  {
+    title: 'AI & LLM',
+    skills: ['RAG', 'Vector Search', 'Embeddings', 'pgvector', 'ChromaDB', 'OpenAI API', 'Gemini API', 'LangChain', 'Hugging Face']
+  },
+  {
+    title: 'Frameworks & Libraries',
+    skills: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'WebSockets', 'Tailwind CSS', 'Bootstrap']
+  },
+  {
+    title: 'Databases & DevOps',
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Docker', 'Nginx', 'Amazon EC2', 'Git', 'GitHub', 'Postman', 'Linux']
+  }
+];
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-
   return (
     <section className="skill" id="skills">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>Here you'll find a showcase of my diverse range of skills and expertise. It highlights the specific talents and proficiencies that make me a valuable asset in my field. I am proficient in C++ programming language and have good knowledge of Data Structures and Algorithms.</p>
-              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                {/*C/C++*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 80]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>C/C++</h5>
-                </div>
-                {/*React*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 60]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>ReactJs</h5>
-                </div>
-                {/*Nextjs*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 50]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>NextJs</h5>
-                </div>
-                {/*HTML*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 70]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Html</h5>
-                </div>
-                {/*CSS*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 60]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Css</h5>
-                </div>
-                {/*Javascript*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 60]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Javascript</h5>
-                </div>
-                {/*Node*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 60]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Node</h5>
-                </div>
-                {/*ExpressJs*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 50]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>ExpressJs</h5>
-                </div>
-                {/*Bootstrap*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 70]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Bootstrap</h5>
-                </div>
-                {/*MySQL*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 60]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>MySQL</h5>
-                </div>
-                {/*MongoDb*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 50]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>MongoDb</h5>
-                </div>
-                {/*Git and Github*/}
-                <div className="item">
-                  <ChangingProgressProvider values={[0, 75]}>
-                    {percentage => (
-                      <CircularProgressbar
-                        value={percentage}
-                        text={`${percentage}%`}
-                        background
-                        backgroundPadding={20}
-                        styles={buildStyles({
-                          backgroundColor: "#151515",
-                          textColor: "#fff",
-                          textSize: "0.8rem",
-                          pathColor: "#863494",
-                          trailColor: "transparent",
-                          pathTransitionDuration: 1
-                        })}
-                      />
-                    )}
-                  </ChangingProgressProvider>
-                  <h5 style={{ fontFamily: 'sans-serif' }}>Git and Github</h5>
-                </div>
-              </Carousel>
+              <h2>Skills & Technologies</h2>
+              <p>Core technical competencies across AI engineering, full-stack development, and infrastructure.</p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '28px', marginTop: '30px' }}>
+                {SKILL_CATEGORIES.map((category, idx) => (
+                  <div key={idx} style={{ textAlign: 'left' }}>
+                    <h4 style={{ 
+                      fontSize: '1.15rem', 
+                      color: '#b8860b', 
+                      background: 'linear-gradient(90deg, #aa367c, #b8860b)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      marginBottom: '12px',
+                      fontWeight: 600
+                    }}>
+                      {category.title}
+                    </h4>
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                      {category.skills.map((skill, sIdx) => (
+                        <span
+                          key={sIdx}
+                          style={{
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.15)',
+                            borderRadius: '8px',
+                            padding: '8px 16px',
+                            color: '#fff',
+                            fontSize: '0.95rem',
+                            fontWeight: 500,
+                            letterSpacing: '0.3px',
+                            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.25)',
+                            transition: 'all 0.2s ease-in-out'
+                          }}
+                          onMouseEnter={e => {
+                            e.currentTarget.style.borderColor = '#aa367c';
+                            e.currentTarget.style.background = 'rgba(170, 54, 124, 0.18)';
+                            e.currentTarget.style.transform = 'translateY(-2px)';
+                          }}
+                          onMouseLeave={e => {
+                            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                            e.currentTarget.style.transform = 'translateY(0)';
+                          }}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image5" />
+      <img className="background-image-left" src={colorSharp} alt="Background decoration" />
     </section>
-  )
-}
+  );
+};
